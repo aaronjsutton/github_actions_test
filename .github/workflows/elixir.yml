@@ -37,7 +37,7 @@ jobs:
           restore-keys: ${{ runner.os }}-mix-
       - name: Install dependencies
         run: mix deps.get
-      - name: Run tests
-        run: mix test
+      - name: Build service
+        run: mix compile
       - name: Phoenix release
         uses: aaronjsutton/phoenix-release-action@v1.0
